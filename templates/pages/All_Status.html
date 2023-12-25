@@ -1,0 +1,58 @@
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/All_Status.css' %}">
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab&display=swap" rel="stylesheet">    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="name-page">
+                    All Activities
+                </div>
+            </div>
+            <div class="links">
+                <ul>
+                    <li><a href="{% url 'home_page' %}">Home</a></li>
+                    <li><a href="{% url 'sign_in' %}">Add Student</a></li>
+                    <li><a href="{% url 'sign_in_for_update' %}">Update Student</a></li>
+                    <li><a href="{% url 'search_activity' %}">Search Activity</a></li>
+                    <li><a class = "here" href="{% url 'all_status' %}">All Status</a></li>
+                    <li><a href="#Info">Info</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <h1>Students' Data</h1>
+    <div id="activetable"></div>
+    
+    <div class="clear-bottom" id="Info"></div>
+    <footer class="Info">
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="name-page">
+                    Student Affairs
+                </div>
+                <br>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+        </div>
+    </footer>
+    <script src="{% static 'js/All_status.js' %}"></script>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,317 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    background-color: #eee;
+}
+
+.container {
+    background-color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    padding: 15px 33px;
+    margin-left: 29px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    outline: none;
+    border: none;
+
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: rgb(106 72 72 / 71%);
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    -ms-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.btn:hover:before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: rgba(65, 39, 39, 0.74);
+
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+}
+
+/* nav bar */
+.header {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 1px 6px 10px #d7d5d5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+
+.container .logo {
+    width: 250px;
+    text-align: center;
+    align-items: center;
+
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.header .container .logo i {
+    font-size: 50px;
+}
+
+.header .container .name-page {
+    width: 196px;
+    height: 60px;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.header .links ul {
+    list-style: none;
+    display: flex;
+    padding-right: 60px;
+    justify-content: space-between;
+
+
+}
+
+.header .links ul li a {
+    text-decoration: none;
+    padding: 20px;
+    margin: 5px;
+    color: black;
+    position: relative;
+}
+
+
+.header .links ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+}
+
+.header .links ul li a:hover:before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+.header .links ul li .here::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+}
+
+.clear {
+    height: 15px;
+}
+
+/*-------------------------------------------------------*/
+h1,
+table,
+th,
+td {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 81px;
+    background-color: #1b1c1d;
+    color: white;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+thead {
+    background-color: #9d9d9d;
+}
+
+tbody tr:hover td {
+    background-color: #d1d1d1;
+}
+
+th {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 19px;
+    white-space: nowrap;
+}
+
+td {
+    text-align: center;
+    font-size: 20px;
+}
+
+tbody td:nth-child(3) {
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+tr,
+td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+/* ------------------------------------------------------ */
+
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-left: 620px;
+    margin-top: 50px;
+    width: 15%;
+    background-color: #1b1c1d;
+    color: white;
+    border-radius: 30px;
+}
+
+.clear-bottom {
+    height: 200px
+}
+
+/*info*/
+/* ------------------------------------------------------ */
+.Info {
+    width: 100%;
+    height: 200px;
+    background-color: #1b1c1d;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.Info .container {
+    background-color: #1b1c1d;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.Info .logo {
+
+    width: 165px;
+    height: 60px;
+    color: #eee;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.Info .logo .name-page {
+    padding-left: 5px;
+}
+
+table {
+    animation: showthetable 2s ease forwards;
+}
+
+@keyframes showthetable {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input,
+select {
+    width: 92%;
+    padding: 5px;
+    margin: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+    

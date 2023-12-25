@@ -1,0 +1,145 @@
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/Home_Page.css' %}">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Slab&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <!-- nav bar  -->
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="name-page">
+                    HOME
+                </div>
+            </div>
+
+
+            <div class="links">
+
+
+                <ul>
+                    <li><a class="here" href="{% url 'home_page' %}">Home</a></li>
+                    <li><a href="#add-student">Add Student</a></li>
+                    <li><a href="#update-student">Update Student</a></li>
+                    <li><a href="#search-activity">Search Activity</a></li>
+                    <li><a href="#All_Status">All Status</a></li>
+                    <li><a href="#Info">Info</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- ----------------------------------------------------------------------------- -->
+    <!-- add student section  -->
+    <div class="clear" id="add-student"></div>
+    <section class="add-student">
+        <div class="container">
+
+            <div class="add-img">
+                <img src="{% static 'image/add.png' %}" alt="">
+            </div>
+
+            <div class="add-text">
+                <h3>Add New Student</h3>
+                <p>Welcome to Add New Student section<br> This section allows you to add a new student <br> to the
+                    site by filling in the student's data in the form <br> and saving it for late use.</p>
+                <p>Press "Add" button to go to the page<br> and fill student data</p>
+
+                <button class="btn" onclick="location.href='{% url 'sign_in' %}'"><a href="{% url 'sign_in' %}">Add</a></button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ------------------------------------------------------------------------------ -->
+    <div class="clear" id="update-student"></div>
+    <section class="update-student" id="update-student">
+        <div class="container">
+
+            <div class="add-text">
+                <h3>Update Student</h3>
+                <p>
+                    Welcome to Update Student section<br> This section allows you to update an existing <br> student data
+                    by providing you  <br>the old data in the form and updating it<br>  to the new data then saving it
+                    to the
+                    site. <br>
+                </p>
+                
+                <p>Press "Update" button to go to the page<br> and update student data</p>
+
+                <button class="btn" onclick="location.href='{% url 'sign_in_for_update' %}'"><a
+                        href="{% url 'sign_in_for_update' %}">Update</a></button>
+            </div>
+
+            <div class="add-img">
+                <img src="{% static 'image/update2.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- ---------------------------------------------------- -->
+    <div class="clear" id="search-activity"></div>
+    <section class="search-activity">
+        <div class="container">
+            <div class="add-img">
+                <img src="{% static 'image/search.png' %}" alt="">
+            </div>
+            <div class="add-text">
+                <h3>Search Activity</h3>
+                <p>Welcome to Search Student Activity section<br> This section allows you to search for an existing<br>
+                    student  to show the data. <br></p>
+                <p>Press "Search" button to go to the page<br> and search for student</p>
+                <button class="btn" onclick="location.href='{% url 'search_activity'%}'"><a
+                        href="{% url 'search_activity' %}">Search</a></button>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------- -->
+    <div class="clear" id="All_Status"></div>
+    <section class="update-student" id="update-student">
+        <div class="container">
+            <div class="add-text">
+                <h3>Show All Status</h3>
+                <p>Welcome to Show All Status section<br> This section provides you all students' data <br> that
+                    registered
+                    on the site. <br></p>
+                <p>Press "All Status" button to go to the page<br> and show all students' data</p>
+                <button class="btn" onclick="location.href='{% url 'all_status' %}"><a href="{% url 'all_status' %}">All
+                        Status</a></button>
+            </div>
+            <div class="add-img">
+                <img src="{% static 'image/all status.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- ---------------------------------------------------- -->    
+    <div class="clear" id="Info"></div>
+    <footer class="Info">
+        <div class="container">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="name-page">
+                    student affairs
+                </div>
+                <br>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-twitter"></i>
+                <i class="fa-brands fa-square-instagram"></i>
+            </div>
+        </div>
+    </footer>
+   
+</body>
+
+</html>
+{% endblock content %}
